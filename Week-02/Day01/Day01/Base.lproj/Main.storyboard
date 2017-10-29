@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEz-xC-FtC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aRl-hb-g2Z">
+            <objects>
+                <navigationController id="kEz-xC-FtC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wl9-e4-vTk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.074689737219999996" green="0.37703541159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nVD-o6-3fV" kind="relationship" relationship="rootViewController" id="hEh-8J-jkJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eI-7B-h3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="99"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="kTd-OH-6HB">
+            <objects>
+                <viewController id="nVD-o6-3fV" customClass="ViewController" customModule="Day01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bi4-j6-GJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-JG-E8v">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.054813494991464151" blue="0.1414402993456424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nVD-o6-3fV" id="7x8-XE-02u"/>
+                                    <outlet property="delegate" destination="nVD-o6-3fV" id="BIU-CY-wNe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ynn-JG-E8v" firstAttribute="leading" secondItem="6fX-Po-QuG" secondAttribute="leading" id="3M4-lE-IlG"/>
+                            <constraint firstItem="6fX-Po-QuG" firstAttribute="bottom" secondItem="ynn-JG-E8v" secondAttribute="bottom" id="K0E-85-TdW"/>
+                            <constraint firstItem="ynn-JG-E8v" firstAttribute="top" secondItem="6fX-Po-QuG" secondAttribute="top" id="Q6m-7F-Vce"/>
+                            <constraint firstItem="6fX-Po-QuG" firstAttribute="trailing" secondItem="ynn-JG-E8v" secondAttribute="trailing" id="Sby-Ol-5KT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6fX-Po-QuG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="Eck-Yd-e7Z">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="设置" id="GQv-4M-naW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Of-Ls-erV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ynn-JG-E8v" id="495-cb-uru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KO4-Pq-DXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="设置" width="30" height="30"/>
+    </resources>
+</document>
